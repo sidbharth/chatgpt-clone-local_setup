@@ -12,34 +12,33 @@
 }
 
 @layer components {
-
   /* SideBar */
-  .sidebar{
+  .sidebar {
     @apply flex flex-col gap-y-4 h-screen bg-dark-grey p-5 pt-8 relative duration-500;
   }
 
-  .sidebar__app-bar{
+  .sidebar__app-bar {
     @apply flex justify-around items-center;
   }
-  
-  .sidebar__app-title{
+
+  .sidebar__app-title {
     @apply text-white font-medium text-xl duration-500;
   }
-  
+
   .sidebar__btn-close {
     @apply cursor-pointer duration-500 text-white justify-end;
   }
 
-  .sidebar__btn-icon{
+  .sidebar__btn-icon {
     @apply w-8 h-8;
   }
 
-  .sidebar__app-logo{
+  .sidebar__app-logo {
     @apply cursor-pointer duration-500 text-white;
   }
 
-/* SideBar Nav */
-  .nav{
+  /* SideBar Nav */
+  .nav {
     @apply flex justify-around;
   }
 
@@ -50,26 +49,25 @@
     text-white text-base;
   }
 
-  .nav__icons{
+  .nav__icons {
     @apply cursor-pointer duration-500 text-white
     text-xl;
   }
 
-  .nav__bottom{
+  .nav__bottom {
     @apply flex flex-col justify-end h-screen;
   }
 
-  .nav__msg{
+  .nav__msg {
     @apply flex bg-yellow-900 rounded-xl p-4 text-white;
   }
 
-  .nav__p{
+  .nav__p {
     @apply font-mono;
   }
 
-
   /* CHATVIEW */
-  .chatview{
+  .chatview {
     @apply h-screen flex-1 p-2 duration-500 overflow-hidden relative bg-slate-200
   dark:bg-light-grey;
   }
@@ -80,13 +78,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
   .chatview__chatarea {
     @apply h-[85vh] w-full overflow-y-scroll flex flex-col m-2 shadow-md;
   }
-  
-  .form{
+
+  .form {
     @apply flex justify-between flex-col items-stretch sm:flex-row m-2 absolute bottom-0 left-0 right-0
     text-black dark:text-white duration-500;
   }
@@ -102,71 +100,69 @@
     @apply rounded-lg shadow-lg bg-cover bg-gray-400 h-[512px] w-[512px] duration-500 ease-out;
   }
 
-  .chatview__textarea-message{
+  .chatview__textarea-message {
     @apply text-xl bg-transparent h-16 sm:w-screen max-h-[20rem] min-h-[4rem] p-2 dark:bg-light-grey
     border border-light-grey dark:border-dark-grey overflow-y-hidden mx-2
     focus:ring-offset-indigo-200 focus:ring-2 focus:ring-offset-2
     resize-y rounded-xl;
   }
 
-  .chatview__btn-send{
+  .chatview__btn-send {
     @apply h-16 px-4 rounded-xl bg-transparent hover:bg-slate-200 hover:dark:bg-dark-grey border border-light-grey
     dark:border-dark-grey focus:ring-offset-indigo-200 text-black dark:text-white transition 
     ease-in-out duration-500 text-center text-base font-semibold shadow-md 
     focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
 
-  .chatview__btn-send:disabled{
-    @apply hover:bg-light-grey transition ease-in duration-500 text-center text-base font-semibold shadow-md
+  .chatview__btn-send:disabled {
+    @apply hover:bg-light-grey transition ease-in duration-500 text-center text-base font-semibold shadow-md;
   }
-
 
   /* ChatMessage */
-  .message{
-    @apply  gap-2 p-5 m-2 flex items-start justify-between;
+  .message {
+    @apply gap-2 p-5 m-2 flex items-start justify-between;
   }
 
-  .message__wrapper{
+  .message__wrapper {
     @apply flex-1 w-screen flex-wrap overflow-hidden;
   }
 
-  .message__markdown{
+  .message__markdown {
     @apply text-xl text-slate-700 dark:text-slate-200;
   }
 
-  .message__createdAt{
+  .message__createdAt {
     @apply text-sm font-thin italic text-slate-600 dark:text-slate-300;
   }
 
-  .message__pic{
+  .message__pic {
     @apply h-10 w-10 bg-slate-200 mr-4 rounded-full flex items-center justify-center text-xl;
   }
 
-  .message__thinking{
-    @apply animate-pulse duration-1000 h-12 w-12 dark:text-white text-black text-xl
+  .message__thinking {
+    @apply animate-pulse duration-1000 h-12 w-12 dark:text-white text-black text-xl;
   }
 
   /* Signin Page */
 
-  .signin{
+  .signin {
     @apply flex flex-col justify-center items-center h-screen w-screen overflow-hidden bg-dark-grey;
   }
 
-  .signin__container{
+  .signin__container {
     @apply border-4 rounded-2xl h-72 w-72 p-5 flex flex-col justify-center items-center;
   }
 
-  .signin__btn{
+  .signin__btn {
     @apply h-12 px-4 rounded-xl bg-slate-100 hover:bg-slate-300 border
      border-light-grey focus:ring-offset-indigo-200 text-black transition 
     ease-in-out duration-500 text-center text-base font-semibold shadow-md 
     focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
-  
-  .signin__tos{
+
+  .signin__tos {
     @apply text-white text-center font-bold p-2;
   }
-
 }
 
 ::-webkit-scrollbar {
@@ -175,4 +171,64 @@
 
 ::-webkit-scrollbar-thumb {
   @apply bg-light-grey dark:bg-dark-grey rounded-xl;
+}
+.form-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-page img {
+  display: block;
+  width: 80px;
+  margin: 30px auto;
+  box-shadow: 0 5px 10px -7px #333333;
+  border-radius: 50%;
+}
+
+.form-page .form-block {
+  background-color: #ffffff;
+  width: 500px;
+  margin: 50px auto 10px auto;
+  padding: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px -3px #333;
+  text-align: center;
+}
+
+.form-page input {
+  border-radius: 100px;
+  padding: 10px 15px;
+  width: 50%;
+  border: 1px solid #d9d9d9;
+  outline: none;
+  display: block;
+  margin: 20px auto 20px auto;
+}
+
+.form-page button {
+  border-radius: 100px;
+  border: none;
+  background: #719be6;
+  width: 50%;
+  padding: 10px;
+  color: #ffffff;
+  margin-top: 25px;
+  box-shadow: 0 2px 10px -3px #719be6;
+  display: block;
+  margin: 55px auto 10px auto;
+}
+
+.form-page a {
+  text-align: center;
+  margin-top: 30px;
+  color: #719be6;
+  text-decoration: none;
+  padding: 5px;
+  display: inline-block;
+}
+
+.form-page a:hover {
+  text-decoration: underline;
 }
